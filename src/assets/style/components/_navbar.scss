@@ -1,14 +1,17 @@
-.navbar-brand{
-  height: 65px;
-  .navbar-item{
-    display: flex;
-    justify-content: center;
+.navbar{
+  letter-spacing: 0.75px;
+  .navbar-brand{
+    height: 65px;
+    .navbar-item{
+      display: flex;
+      justify-content: center;
+    }
+    img{
+      min-height: 100%;
+    }
   }
-  img{
-    min-height: 100%;
+  .fas, .fab, .far{
+    margin-right: 5px;
   }
 }
 
-.navbar{
-  letter-spacing: 0.75px;
-}

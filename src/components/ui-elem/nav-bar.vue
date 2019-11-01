@@ -7,15 +7,15 @@
         </b-navbar-item>
       </template>
       <template slot="end">
-        <b-navbar-item href="#" class="has-text-weight-light">Home</b-navbar-item>
-        <b-navbar-item href="#" class="has-text-weight-light">Detalhes</b-navbar-item>
+        <b-navbar-item href="#" class="has-text-weight-light"> <i class="fas fa-home"></i> Home</b-navbar-item>
+        <b-navbar-item href="#" class="has-text-weight-light"> <i class="fas fa-sitemap"></i> Detalhes</b-navbar-item>
       </template>
 
       <template slot="end">
         <b-navbar-item tag="div">
           <div class="buttons">
-            <a class="button is-link">Registro</a>
-            <a class="button is-secondary">Login</a>
+            <a class="button is-link"> <i class="fas fa-user-plus"></i> Registro</a>
+            <a class="button is-secondary"> <i class="fas fa-sign-in-alt"></i> Login</a>
           </div>
         </b-navbar-item>
       </template>
