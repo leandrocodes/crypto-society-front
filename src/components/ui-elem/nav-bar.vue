@@ -1,23 +1,21 @@
 <template>
   <div class="container">
-    <b-navbar class="is-primary">
+    <b-navbar transparent>
       <template slot="brand">
         <b-navbar-item tag="router-link" :to="{ path: '/' }">
           <img src="../../assets/img/logo.png" alt="Lightweight UI components for Vue.js based on Bulma" />
         </b-navbar-item>
       </template>
       <template slot="end">
-        <b-navbar-item href="#" class="is-family-primary">Home</b-navbar-item>
-        <b-navbar-item href="#" class="is-family-primary">Detalhes</b-navbar-item>
+        <b-navbar-item href="#" class="has-text-weight-light">Home</b-navbar-item>
+        <b-navbar-item href="#" class="has-text-weight-light">Detalhes</b-navbar-item>
       </template>
 
       <template slot="end">
         <b-navbar-item tag="div">
           <div class="buttons">
-            <a class="button is-link is-family-primary">
-              <strong>Registro</strong>
-            </a>
-            <a class="button is-secondary is-family-primary"> <strong>Login</strong></a>
+            <a class="button is-link">Registro</a>
+            <a class="button is-secondary">Login</a>
           </div>
         </b-navbar-item>
       </template>
