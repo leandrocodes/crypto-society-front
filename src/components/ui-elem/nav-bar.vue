@@ -7,17 +7,17 @@
         </b-navbar-item>
       </template>
       <template slot="end">
-        <b-navbar-item href="#">Home</b-navbar-item>
-        <b-navbar-item href="#">Detalhes</b-navbar-item>
+        <b-navbar-item href="#" class="is-family-primary">Home</b-navbar-item>
+        <b-navbar-item href="#" class="is-family-primary">Detalhes</b-navbar-item>
       </template>
 
       <template slot="end">
         <b-navbar-item tag="div">
           <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
+            <a class="button is-link is-family-primary">
+              <strong>Registro</strong>
             </a>
-            <a class="button is-secondary">Log in</a>
+            <a class="button is-secondary is-family-primary"> <strong>Login</strong></a>
           </div>
         </b-navbar-item>
       </template>

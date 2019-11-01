@@ -2,6 +2,8 @@
 
 
 @import "abstract/variables";
+@import "components/navbar";
+
 html, body{
   background: $primary;
 }

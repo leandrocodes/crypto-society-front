@@ -1,0 +1,10 @@
+.navbar-brand{
+  height: 65px;
+  .navbar-item{
+    display: flex;
+    justify-content: center;
+  }
+  img{
+    min-height: 100%;
+  }
+}
