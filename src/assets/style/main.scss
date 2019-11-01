@@ -1,0 +1,10 @@
+@import "~bulma/sass/utilities/_all";
+
+
+@import "abstract/variables";
+html, body{
+  background: $primary;
+}
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
