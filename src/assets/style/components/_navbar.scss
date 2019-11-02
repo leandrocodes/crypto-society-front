@@ -16,26 +16,37 @@
   div.navbar-item{
     margin-left: 5%;
   }
-  .navbar-menu.is-active{
-    text-align: right;
-    background: transparent;
-    .navbar-item{
-      color: $secondary;
-    }
-    .buttons{
-      display: flex;
-      align-items: flex-end;
-      flex-direction: column;
-      .button{
-        margin: 15px 0;
+  .navbar-menu{
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      background: #151515;
+      display: block;
+      position: absolute;
+      right: -50%;
+      .navbar-item{
+        color: $secondary;
       }
+      .buttons{
+        margin-top: -15px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+        .button{
+          margin: 10px 0;
+        }
+      }
+    }
+    &.is-active{
+      right: 0%;
+      animation: fadeIn .5s ease forwards;
     }
   }
 
-  @keyframes slideIn {
-    0% {height: 0px;}
-    100% {height: 100%;}
-  }
+  @keyframes fadeIn {
+    from { opacity: 0; right: -50%; }
+      to { opacity: 1; right: 0%;}
+}
 
 }
 
