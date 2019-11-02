@@ -13,5 +13,29 @@
   .fas, .fab, .far{
     margin-right: 5px;
   }
+  div.navbar-item{
+    margin-left: 5%;
+  }
+  .navbar-menu.is-active{
+    text-align: right;
+    background: transparent;
+    .navbar-item{
+      color: $secondary;
+    }
+    .buttons{
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      .button{
+        margin: 5px 0;
+      }
+    }
+  }
+
+  @keyframes slideIn {
+    0% {height: 0px;}
+    100% {height: 100%;}
+  }
+
 }
 

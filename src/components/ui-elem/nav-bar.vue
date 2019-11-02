@@ -6,7 +6,7 @@
           <img src="../../assets/img/logo.png" alt="Lightweight UI components for Vue.js based on Bulma" />
         </b-navbar-item>
       </template>
-      <template slot="end">
+      <template slot="end" style="margin-right: 10%;">
         <b-navbar-item href="#" class="has-text-weight-light"> <i class="fas fa-home"></i> Home</b-navbar-item>
         <b-navbar-item href="#" class="has-text-weight-light"> <i class="fas fa-sitemap"></i> Detalhes</b-navbar-item>
       </template>
