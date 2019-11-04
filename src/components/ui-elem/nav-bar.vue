@@ -7,8 +7,8 @@
         </b-navbar-item>
       </template>
       <template slot="end" style="margin-right: 10%;">
-        <b-navbar-item href="#" class="has-text-weight-light"> <i class="fas fa-home"></i> Home</b-navbar-item>
-        <b-navbar-item href="#" class="has-text-weight-light"> <i class="fas fa-sitemap"></i> Detalhes</b-navbar-item>
+        <b-navbar-item href="#" class="has-text-weight-light"> Início</b-navbar-item>
+        <b-navbar-item href="#" class="has-text-weight-light"> Detalhes</b-navbar-item>
       </template>
 
       <template slot="end">
