@@ -1,5 +1,4 @@
 <template>
-  <div class="container">
     <b-navbar transparent>
       <template slot="brand">
         <b-navbar-item tag="router-link" :to="{ path: '/' }">
@@ -20,7 +19,6 @@
         </b-navbar-item>
       </template>
     </b-navbar>
-  </div>
 </template>
 
 <script>
