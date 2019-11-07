@@ -4,7 +4,7 @@ import axios from 'axios'
 Vue.use({
   install (Vue) {
     Vue.prototype.axios = axios.create({
-      baseURL: 'https://pokeapi.co/api/v2/',
+      baseURL: 'https://houseproto-back.herokuapp.com/',
       headers: {
       }
     })
