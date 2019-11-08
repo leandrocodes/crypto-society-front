@@ -2,7 +2,7 @@ import Vue from 'vue'
 import axios from 'axios'
 
 Vue.use({
-  install (Vue) {
+  install(Vue) {
     Vue.prototype.axios = axios.create({
       baseURL: 'https://houseproto-back.herokuapp.com/',
       headers: {
