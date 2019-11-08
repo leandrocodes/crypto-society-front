@@ -24,4 +24,10 @@ export default {
 
 <style>
 
+body{
+  background-image: url('../assets/img/bg-login.png') !important;
+  background-size: 100%;
+  background-position: bottom;
+}
+
 </style>
