@@ -1,30 +1,42 @@
 <template>
-  <div class="container login">
-    <div class="columns is-centered is-mobile">
-      <div class="column is-4-fullhd is-4-desktop is-6-widescreen is-6-tablet is-8-mobile">
-        <form class="form-login">
-          <figure class="image">
-            <img src="../assets/img/login-illustration.png" alt srcset />
-          </figure>
-          <div class="field">
-            <label class="label has-text-dark has-text-weight-semibold is-size-5">Email</label>
-            <div class="control has-icons-left has-icons-right">
-              <input class="has-text-dark input is-medium" type="email" placeholder="nome@mail.com" />
-              <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-              </span>
+  <div class="login">
+    <div class="container">
+      <div class="columns is-centered is-mobile">
+        <div class="column is-4-fullhd is-4-desktop is-6-widescreen is-6-tablet is-11-mobile">
+          <h1 class="has-text-centered has-text-light title">Login</h1>
+          <form class="form-login">
+            <figure class="image">
+              <img src="../assets/img/login-illustration.png" alt srcset />
+            </figure>
+            <div class="field">
+              <label class="label has-text-dark has-text-weight-semibold is-size-5">Email</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="has-text-dark input is-medium" type="email" placeholder="nome@mail.com" />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="label has-text-dark has-text-weight-semibold is-size-5">Senha</label>
-            <div class="control has-icons-left has-icons-right">
-              <input class="has-text-dark input is-medium" type="password" placeholder="***" />
-              <span class="icon is-small is-left">
-                <i class="fas fa-lock"></i>
-              </span>
+            <div class="field">
+              <label class="label has-text-dark has-text-weight-semibold is-size-5">Senha</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="has-text-dark input is-medium" type="password" placeholder="***" />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </div>
             </div>
-          </div>
-        </form>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link is-medium">Login</button>
+              </div>
+            </div>
+            <div class="field">
+                Não tem uma conta?
+                <a class="has-text-info">Cadastrar</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -46,10 +58,13 @@ export default {
 }
 </script>
 
-<style>
-body {
+<style scoped>
+.login {
+  overflow: hidden;
+  height: 100vh;
   background-image: url('../assets/img/bg-login.png') !important;
   background-size: 100%;
+  background-repeat: no-repeat;
   background-position: bottom;
 }
 </style>
