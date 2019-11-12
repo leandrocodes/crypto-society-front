@@ -28,12 +28,12 @@
             </div>
             <div class="field is-grouped">
               <div class="control">
-                <button class="button is-link is-medium">Login</button>
+                <button @click.prevent='login' class="button is-link is-medium">Login</button>
               </div>
             </div>
             <div class="field">
-                Não tem uma conta?
-                <a class="has-text-info">Cadastrar</a>
+              Não tem uma conta?
+              <a class="has-text-info">Cadastrar</a>
             </div>
           </form>
         </div>
@@ -51,7 +51,16 @@ export default {
   methods: {
     login() {
       /* eslint-disable no-console */
-      console.log(this.axios.get('pokemon/ditto/'))
+      this.axios.post('register/', {
+        email: this.email,
+        password: this.password
+      })
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
       //console.log(this.email, this.senha)
     }
   }
