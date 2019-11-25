@@ -14,7 +14,7 @@
         <b-navbar-item tag="div">
           <div class="buttons">
             <a class="button is-link"> <i class="fas fa-user-plus"></i> Registro</a>
-            <a class="button is-secondary"> <i class="fas fa-sign-in-alt"></i> Login</a>
+            <a class="button is-secondary"> <router-link to="/login"><i class="fas fa-sign-in-alt"></i> Login</router-link> </a>
           </div>
         </b-navbar-item>
       </template>

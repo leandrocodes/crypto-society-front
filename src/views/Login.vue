@@ -9,18 +9,18 @@
               <img src="../assets/img/login-illustration.png" alt srcset />
             </figure>
             <div class="field">
-              <label class="label has-text-dark has-text-weight-semibold is-size-5">Email</label>
+              <label class="label has-text-dark has-text-weight-semibold is-size-6">Email</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="has-text-dark input is-medium" type="email" placeholder="nome@mail.com" />
+                <input class="has-text-dark input" type="email" placeholder="nome@mail.com" />
                 <span class="icon is-small is-left">
                   <i class="fas fa-user"></i>
                 </span>
               </div>
             </div>
             <div class="field">
-              <label class="label has-text-dark has-text-weight-semibold is-size-5">Senha</label>
+              <label class="label has-text-dark has-text-weight-semibold is-size-6">Senha</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="has-text-dark input is-medium" type="password" placeholder="***" />
+                <input class="has-text-dark input" type="password" placeholder="***" />
                 <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                 </span>
@@ -28,7 +28,7 @@
             </div>
             <div class="field is-grouped">
               <div class="control">
-                <button @click.prevent='login' class="button is-link is-medium">Login</button>
+                <button @click.prevent="login" class="button is-link">Login</button>
               </div>
             </div>
             <div class="field">
@@ -51,16 +51,17 @@ export default {
   methods: {
     login() {
       /* eslint-disable no-console */
-      this.axios.post('register/', {
-        email: this.email,
-        password: this.password
-      })
-        .then(function (response) {
-          console.log(response);
+      this.axios
+        .post('register/', {
+          email: this.email,
+          password: this.password
         })
-        .catch(function (error) {
-          console.log(error);
-        });
+        .then(function(response) {
+          console.log(response)
+        })
+        .catch(function(error) {
+          console.log(error)
+        })
       //console.log(this.email, this.senha)
     }
   }
