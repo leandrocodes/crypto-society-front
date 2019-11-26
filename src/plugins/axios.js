@@ -6,6 +6,8 @@ Vue.use({
     Vue.prototype.axios = axios.create({
       baseURL: 'https://houseproto-back.herokuapp.com/',
       headers: {
+        'Access-Control-Allow-Origin': 'null',
+        'Content-Type': 'application/json',
       }
     })
 
