@@ -28,7 +28,7 @@
             </div>
             <div class="field is-grouped">
               <div class="control">
-                <button @click.prevent="login" class="button is-link">Criar conta</button>
+                <button @click.prevent="register" class="button is-link">Criar conta</button>
               </div>
             </div>
             <div class="field">
@@ -49,8 +49,9 @@ export default {
     password: ''
   }),
   methods: {
-    login() {
+    register() {
       /* eslint-disable no-console */
+      console.log('clicked')
       this.axios
         .post('register/', {
           email: this.email,
