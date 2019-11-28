@@ -3,7 +3,10 @@
     <div class="container">
       <div class="columns is-centered is-mobile">
         <div class="column is-4-fullhd is-4-desktop is-6-widescreen is-6-tablet is-11-mobile">
-          <h1 class="has-text-centered has-text-light title">Login</h1>
+          <h1 class="has-text-centered has-text-light title">
+            Login
+            <div class="title-dash"></div>
+          </h1>
           <form class="form-login">
             <figure class="image">
               <img src="../assets/img/login-illustration.png" alt srcset />
