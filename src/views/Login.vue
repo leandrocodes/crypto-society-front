@@ -3,11 +3,18 @@
     <div class="container">
       <div class="columns is-centered is-mobile">
         <div class="column is-4-fullhd is-4-desktop is-6-widescreen is-6-tablet is-11-mobile">
-          <h1 class="has-text-centered has-text-light title">
+          <h1 class="has-text-centered has-text-light title has-text-weight-medium">
             Login
             <div class="title-dash"></div>
           </h1>
+          <div class="field">
+            <h6 class="has-text-centered has-text-light">Bem-vindo de volta! Faça o login para acessar a plataforma.</h6>
+          </div>
           <form class="form-login">
+            <div class="field">
+              Não tem uma conta ainda?
+              <a class="has-text-info">Criar uma conta</a>
+            </div>
             <figure class="image">
               <img src="../assets/img/login-illustration.png" alt srcset />
             </figure>
@@ -34,9 +41,8 @@
                 <button @click.prevent="login" class="button is-link">Login</button>
               </div>
             </div>
-            <div class="field">
-              Não tem uma conta?
-              <a class="has-text-info">Cadastrar</a>
+            <div class="field has-text-left">
+              <a class="has-text-info">Esqueci a minha senha</a>
             </div>
           </form>
         </div>

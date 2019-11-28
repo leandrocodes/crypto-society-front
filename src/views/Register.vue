@@ -3,10 +3,13 @@
     <div class="container">
       <div class="columns is-centered is-mobile">
         <div class="column is-4-fullhd is-4-desktop is-6-widescreen is-6-tablet is-11-mobile">
-          <h1 class="has-text-centered has-text-light title">
+          <h1 class="has-text-centered has-text-light title has-text-weight-medium">
             Registro
             <div class="title-dash"></div>
           </h1>
+          <div class="field">
+            <h6 class="has-text-centered has-text-light">Bem-vindo! Crie uma conta para ter acesso a plataforma.</h6>
+          </div>
           <div class="form-login">
             <figure class="image">
               <img src="../assets/img/login-illustration.png" alt srcset />
@@ -23,7 +26,7 @@
             <div class="field">
               <label class="label has-text-dark has-text-weight-semibold is-size-6">Senha</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="has-text-dark input" type="password" placeholder="***" v-model="password"/>
+                <input class="has-text-dark input" type="password" placeholder="***" v-model="password" />
                 <p>{{ password }}</p>
                 <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
@@ -37,7 +40,7 @@
             </div>
             <div class="field">
               Já tem uma conta?
-              <a class="has-text-info">Login</a>
+              <a class="has-text-info">Faça o Login</a>
             </div>
           </div>
         </div>
@@ -48,27 +51,29 @@
 
 <script>
 export default {
-  data() {
-    return {
-      email: '',
-      password: ''
-    }
-  },
+  data: () => ({
+    email: '',
+    password: ''
+  }),
   methods: {
     register() {
       /* eslint-disable no-console */
       console.log(this.email, this.password)
       console.log('criando')
       this.axios
-        .post('register/', {
-          email: this.email,
-          password: this.password,
-          full_name: 'leandro',
-          gender: '1',
-          cpf: '123',
-          telephone: '123',
-          address: 'rua marcelino'
-        }, { useCredentails: true })
+        .post(
+          'register/',
+          {
+            email: this.email,
+            password: this.password,
+            full_name: 'leandro',
+            gender: '1',
+            cpf: '123',
+            telephone: '123',
+            address: 'rua marcelino'
+          },
+          { useCredentails: true }
+        )
         .then(function(response) {
           console.log('criou')
           console.log(response)
