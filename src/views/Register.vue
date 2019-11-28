@@ -51,7 +51,7 @@ export default {
   methods: {
     register() {
       /* eslint-disable no-console */
-      console.log('clicked')
+      console.log('criando')
       this.axios
         .post('register/', {
           email: this.email,
@@ -63,9 +63,11 @@ export default {
           address: 'rua marcelino'
         }, { useCredentails: true })
         .then(function(response) {
+          console.log('criou')
           console.log(response)
         })
         .catch(function(error) {
+          console.log('errou')
           console.log(error)
         })
       //console.log(this.email, this.senha)
