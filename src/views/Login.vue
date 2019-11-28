@@ -11,9 +11,9 @@
             <h6 class="has-text-centered has-text-light">Bem-vindo de volta! Faça o login para acessar a plataforma.</h6>
           </div>
           <form class="form-login">
-            <div class="field">
+            <div class="field has-text-centered">
               Não tem uma conta ainda?
-              <a class="has-text-info">Criar uma conta</a>
+              <a class="has-text-info">Criar uma agora</a>
             </div>
             <figure class="image">
               <img src="../assets/img/login-illustration.png" alt srcset />
@@ -23,7 +23,7 @@
               <div class="control has-icons-left has-icons-right">
                 <input class="has-text-dark input" type="email" placeholder="nome@mail.com" />
                 <span class="icon is-small is-left">
-                  <i class="fas fa-user"></i>
+                  <i class="fas fa-envelope"></i>
                 </span>
               </div>
             </div>
@@ -42,7 +42,7 @@
               </div>
             </div>
             <div class="field has-text-left">
-              <a class="has-text-info">Esqueci a minha senha</a>
+              <a class="has-text-info">Esqueci minha senha</a>
             </div>
           </form>
         </div>
