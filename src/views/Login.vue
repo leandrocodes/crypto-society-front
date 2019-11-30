@@ -13,7 +13,7 @@
           <form class="form-login">
             <div class="field has-text-centered">
               Não tem uma conta ainda?
-              <a class="has-text-info">Criar uma agora</a>
+              <router-link class="has-text-info" to="/register">Criar uma agora</router-link>
             </div>
             <figure class="image">
               <img src="../assets/img/login-illustration.png" alt srcset />
