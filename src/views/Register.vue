@@ -13,118 +13,125 @@
           <div class="field">
             <h6 class="has-text-centered has-text-light">Bem-vindo! Siga os passos para criar uma conta e ter acesso a plataforma.</h6>
           </div>
-          <div class="step1" v-show="step === 1">
-            <form class="form-login">
-              <figure class="image">
-                <img src="../assets/img/login-illustration.png" alt srcset />
-              </figure>
 
-              <b-field label="Email" style="width: 100%">
-                <b-input placeholder="nome@email.com" expanded type="email" icon-pack="fas" icon="envelope" v-model="email"></b-input>
-              </b-field>
+          <div v-if="!created">
+            <div class="step1" v-show="step === 1">
+              <form class="form-login">
+                <figure class="image">
+                  <img src="../assets/img/login-illustration.png" alt srcset />
+                </figure>
 
-              <b-field label="Senha" style="width: 100%">
-                <b-input placeholder="***" expanded type="password" icon-pack="fas" icon="lock" v-model="password"></b-input>
-              </b-field>
+                <b-field label="Email" style="width: 100%">
+                  <b-input placeholder="nome@email.com" expanded type="email" icon-pack="fas" icon="envelope" v-model="email"></b-input>
+                </b-field>
 
-              <b-field>
-                <div class="control">
-                  <button @click.prevent="next" class="button is-link">
-                    Dados pessoais
-                    <span style="margin-left: 10px">
-                      <i class="far fa-hand-point-right"></i>
-                    </span>
-                  </button>
+                <b-field label="Senha" style="width: 100%">
+                  <b-input placeholder="***" expanded type="password" icon-pack="fas" icon="lock" v-model="password"></b-input>
+                </b-field>
+
+                <b-field>
+                  <div class="control">
+                    <button @click.prevent="next" class="button is-link">
+                      Dados pessoais
+                      <span style="margin-left: 10px">
+                        <i class="far fa-hand-point-right"></i>
+                      </span>
+                    </button>
+                  </div>
+                </b-field>
+
+                <b-field>
+                  Já tem uma conta?
+                  <router-link class="has-text-info" to="/login">Faça o Login</router-link>
+                </b-field>
+              </form>
+            </div>
+
+            <div v-show="step === 2">
+              <form class="form-login">
+                <figure class="image">
+                  <img src="../assets/img/checklist.png" alt srcset />
+                </figure>
+
+                <b-field label="Nome Completo" style="width: 100%">
+                  <b-input placeholder="João Ninguém" expanded type="text" icon-pack="fas" icon="user" v-model="full_name"></b-input>
+                </b-field>
+
+                <b-field label="Telefone" style="width: 100%">
+                  <b-input placeholder="67 12345 6789" expanded type="text" icon-pack="fas" icon="phone" v-model="telephone"></b-input>
+                </b-field>
+
+                <b-field label="CPF" style="width: 100%">
+                  <b-input placeholder="123.456.789-10" expanded type="text" icon-pack="fas" icon="fingerprint" v-model="cpf"></b-input>
+                </b-field>
+
+                <div class="block">
+                  <b-radio v-model="gender" native-value="Feminino">Feminino</b-radio>
+                  <b-radio v-model="gender" native-value="Masculino">Masculino</b-radio>
                 </div>
-              </b-field>
 
-              <b-field>
-                Já tem uma conta?
-                <router-link class="has-text-info" to="/login">Faça o Login</router-link>
-              </b-field>
-            </form>
+                <b-field>
+                  <div class="control">
+                    <button @click.prevent="next" class="button is-link">
+                      Dados de endereço
+                      <span style="margin-left: 10px">
+                        <i class="far fa-hand-point-right"></i>
+                      </span>
+                    </button>
+                  </div>
+                </b-field>
+
+                <b-field>
+                  Já tem uma conta?
+                  <router-link class="has-text-info" to="/login">Faça o Login</router-link>
+                </b-field>
+              </form>
+            </div>
+
+            <div v-show="step === 3">
+              <form class="form-login">
+                <figure class="image">
+                  <img src="../assets/img/checklist.png" alt srcset />
+                </figure>
+
+                <b-field label="Bairro" style="width: 100%">
+                  <b-input placeholder="Jardim das Rosas" expanded type="text" icon-pack="fas" icon="map" v-model="bairro"></b-input>
+                </b-field>
+
+                <b-field label="Rua" style="width: 100%">
+                  <b-input placeholder="Rua Quinze de Maio" expanded type="text" icon-pack="fas" icon="map-signs" v-model="rua"></b-input>
+                </b-field>
+                <b-field label="Número" style="width: 100%">
+                  <b-input placeholder="123" expanded type="text" icon-pack="fas" icon="map-marker-alt" v-model="numero"></b-input>
+                </b-field>
+
+                <b-field>
+                  <div class="control">
+                    <button @click.prevent="register" class="button is-link">
+                      Cadastrar
+                      <span style="margin-left: 10px">
+                        <i class="far fa-hand-point-right"></i>
+                      </span>
+                    </button>
+                  </div>
+                </b-field>
+
+                <b-field>
+                  Já tem uma conta?
+                  <router-link class="has-text-info" to="/login">Faça o Login</router-link>
+                </b-field>
+              </form>
+            </div>
           </div>
 
-          <div v-show="step === 2">
-            <form class="form-login">
-              <figure class="image">
-                <img src="../assets/img/checklist.png" alt srcset />
-              </figure>
-
-              <b-field label="Nome Completo" style="width: 100%">
-                <b-input placeholder="João Ninguém" expanded type="text" icon-pack="fas" icon="user" v-model="full_name"></b-input>
-              </b-field>
-
-              <b-field label="Telefone" style="width: 100%">
-                <b-input placeholder="67 12345 6789" expanded type="text" icon-pack="fas" icon="phone" v-model="telephone"></b-input>
-              </b-field>
-
-              <b-field label="CPF" style="width: 100%">
-                <b-input placeholder="123.456.789-10" expanded type="text" icon-pack="fas" icon="fingerprint" v-model="cpf"></b-input>
-              </b-field>
-
-              <div class="block">
-                <b-radio v-model="gender" native-value="Feminino">Feminino</b-radio>
-                <b-radio v-model="gender" native-value="Masculino">Masculino</b-radio>
-              </div>
-
-              <b-field>
-                <div class="control">
-                  <button @click.prevent="next" class="button is-link">
-                    Dados de endereço
-                    <span style="margin-left: 10px">
-                      <i class="far fa-hand-point-right"></i>
-                    </span>
-                  </button>
-                </div>
-              </b-field>
-
-              <b-field>
-                Já tem uma conta?
-                <router-link class="has-text-info" to="/login">Faça o Login</router-link>
-              </b-field>
-            </form>
-          </div>
-
-          <div v-show="step === 3">
-            <form class="form-login">
-              <figure class="image">
-                <img src="../assets/img/checklist.png" alt srcset />
-              </figure>
-
-              <b-field label="Bairro" style="width: 100%">
-                <b-input placeholder="Jardim das Rosas" expanded type="text" icon-pack="fas" icon="map" v-model="bairro"></b-input>
-              </b-field>
-
-              <b-field label="Rua" style="width: 100%">
-                <b-input placeholder="Rua Quinze de Maio" expanded type="text" icon-pack="fas" icon="map-signs" v-model="rua"></b-input>
-              </b-field>
-              <b-field label="Número" style="width: 100%">
-                <b-input placeholder="123" expanded type="text" icon-pack="fas" icon="map-marker-alt" v-model="numero"></b-input>
-              </b-field>
-
-              <b-field>
-                <div class="control">
-                  <button @click.prevent="register" class="button is-link">
-                    Cadastrar
-                    <span style="margin-left: 10px">
-                      <i class="far fa-hand-point-right"></i>
-                    </span>
-                  </button>
-                </div>
-              </b-field>
-
-              <b-field>
-                Já tem uma conta?
-                <router-link class="has-text-info" to="/login">Faça o Login</router-link>
-              </b-field>
-            </form>
+          <div v-else>
+            <form class="form-login">conta criada</form>
           </div>
         </div>
       </div>
     </div>
     <b-loading is-full-page :active.sync="isLoading" :can-cancel="false">
-      <b-icon pack="fas" icon="sync-alt" size="is-large" custom-class="fa-spin"></b-icon>
+      <b-icon class="has-text-light" pack="fas" icon="sync-alt" size="is-large" custom-class="fa-spin"></b-icon>
     </b-loading>
   </div>
 </template>
@@ -143,7 +150,8 @@ export default {
     numero: '',
     step: 1,
     progress: 0,
-    isLoading: false
+    isLoading: false,
+    created: false
   }),
   methods: {
     next() {
@@ -172,11 +180,12 @@ export default {
           },
           { useCredentails: true }
         )
-        .then(function(response) {
+        .then(response => {
           console.log('criou')
           console.log(response)
+          this.created = true
         })
-        .catch(function(error) {
+        .catch(error => {
           console.log('errou')
           console.log(error)
         })

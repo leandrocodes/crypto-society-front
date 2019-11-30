@@ -20,6 +20,7 @@ $light: #f2f2f2;
 $twitter: #4099FF;
 $twitter-invert: findColorInvert($twitter);
 $transparent: rgba(0, 0, 0, 0);
+$loading-background: $primary;
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
