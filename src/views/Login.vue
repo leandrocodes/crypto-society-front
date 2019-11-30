@@ -68,8 +68,10 @@ export default {
         email: this.email,
         password: this.password
       })
-        .then(() => {
+        .then((response) => {
           this.$router.push('/dashboard')
+          /*eslint-disable no-console*/
+          console.log(response.data)
         })
         .catch(() => {
 
