@@ -123,6 +123,9 @@
         </div>
       </div>
     </div>
+    <b-loading is-full-page :active.sync="isLoading" :can-cancel="false">
+      <b-icon pack="fas" icon="sync-alt" size="is-large" custom-class="fa-spin"></b-icon>
+    </b-loading>
   </div>
 </template>
 
@@ -135,14 +138,14 @@ export default {
     gender: '',
     cpf: '',
     telephone: '',
-    bairro: '', 
+    bairro: '',
     rua: '',
     numero: '',
     step: 1,
-    progress: 0
+    progress: 0,
+    isLoading: false
   }),
   methods: {
-
     next() {
       this.step++
       this.progress += 33.33
@@ -150,11 +153,11 @@ export default {
 
     register() {
       /* eslint-disable no-console */
-
       this.progress = 100
       console.log(this.email, this.password)
       console.log('criando')
-      let address = `Bairro${this.bairro}, Rua ${this.rua}, Número ${this.numero}`
+      this.isLoading = true
+      let address = `Bairro ${this.bairro}, Rua ${this.rua}, Número ${this.numero}`
       this.axios
         .post(
           'register/',
@@ -169,13 +172,16 @@ export default {
           },
           { useCredentails: true }
         )
-        .then(function (response) {
+        .then(function(response) {
           console.log('criou')
           console.log(response)
         })
-        .catch(function (error) {
+        .catch(function(error) {
           console.log('errou')
           console.log(error)
+        })
+        .finally(() => {
+          this.isLoading = false
         })
     }
   }
