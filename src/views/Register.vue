@@ -168,12 +168,10 @@ export default {
     },
 
     register() {
-      /* eslint-disable no-console */
       this.progress = 100
-      console.log(this.email, this.password)
-      console.log('criando')
       this.isLoading = true
       let address = `Bairro ${this.bairro}, Rua ${this.rua}, Número ${this.numero}`
+
       this.axios.post('register/', {
         email: this.email,
         password: this.password,
@@ -183,12 +181,10 @@ export default {
         telephone: this.telephone,
         address
       })
-        .then(response => {
-          console.log(response)
+        .then(() => {
           this.created = true
         })
-        .catch(error => {
-          console.log(error)
+        .catch(() => {
         })
         .finally(() => {
           this.isLoading = false

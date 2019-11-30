@@ -21,7 +21,7 @@
             <div class="field">
               <label class="label has-text-dark has-text-weight-semibold is-size-6">Email</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="has-text-dark input" type="email" placeholder="nome@mail.com" />
+                <input class="has-text-dark input" type="email" placeholder="nome@mail.com" v-model="email" />
                 <span class="icon is-small is-left">
                   <i class="fas fa-envelope"></i>
                 </span>
@@ -30,7 +30,7 @@
             <div class="field">
               <label class="label has-text-dark has-text-weight-semibold is-size-6">Senha</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="has-text-dark input" type="password" placeholder="***" />
+                <input class="has-text-dark input" type="password" placeholder="***" v-model="password" />
                 <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                 </span>
@@ -48,6 +48,9 @@
         </div>
       </div>
     </div>
+    <b-loading is-full-page :active.sync="isLoading" :can-cancel="false">
+      <b-icon class="has-text-light" pack="fas" icon="sync-alt" size="is-large" custom-class="fa-spin"></b-icon>
+    </b-loading>
   </div>
 </template>
 
@@ -55,23 +58,25 @@
 export default {
   data: () => ({
     email: '',
-    password: ''
+    password: '',
+    isLoading: false
   }),
   methods: {
     login() {
-      /* eslint-disable no-console */
-      this.axios
-        .post('register/', {
-          email: this.email,
-          password: this.password
+      this.isLoading = true
+      this.axios.post('login/', {
+        email: this.email,
+        password: this.password
+      })
+        .then(() => {
+          this.$router.push('/dashboard')
         })
-        .then(function(response) {
-          console.log(response)
+        .catch(() => {
+
         })
-        .catch(function(error) {
-          console.log(error)
+        .finally(() => {
+          this.isLoading = false
         })
-      //console.log(this.email, this.senha)
     }
   }
 }
