@@ -127,11 +127,9 @@
           <div v-else>
             <div class="form-login">
               <figure class="image">
-                <img src="https://img.icons8.com/officel/512/000000/inspection.png">
+                <img src="https://img.icons8.com/officel/512/000000/inspection.png" />
               </figure>
-              <b-field>
-                Conta criada com sucesso!
-              </b-field>
+              <b-field>Conta criada com sucesso!</b-field>
               <b-field>
                 <router-link class="has-text-info" to="/login">Fazer o Login agora!</router-link>
               </b-field>
@@ -176,27 +174,20 @@ export default {
       console.log('criando')
       this.isLoading = true
       let address = `Bairro ${this.bairro}, Rua ${this.rua}, Número ${this.numero}`
-      this.axios
-        .post(
-          'register/',
-          {
-            email: this.email,
-            password: this.password,
-            full_name: this.full_name,
-            gender: this.gender,
-            cpf: this.cpf,
-            telephone: this.telephone,
-            address
-          },
-          { useCredentails: true }
-        )
+      this.axios.post('register/', {
+        email: this.email,
+        password: this.password,
+        full_name: this.full_name,
+        gender: this.gender,
+        cpf: this.cpf,
+        telephone: this.telephone,
+        address
+      })
         .then(response => {
-          console.log('criou')
           console.log(response)
           this.created = true
         })
         .catch(error => {
-          console.log('errou')
           console.log(error)
         })
         .finally(() => {

@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,500,600,700|Poppins:300,400,600,700&display=swap');
 
-$family-serif: "Lato", serif;
-$family-sans-serif: "Poppins", sans-serif;
+$family-serif: "Lato",
+serif;
+$family-sans-serif: "Poppins",
+sans-serif;
 $family-primary: $family-sans-serif;
 $family-secondary: $family-serif;
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $family-secondary;
 }
 
@@ -23,8 +30,7 @@ $transparent: rgba(0, 0, 0, 0);
 $loading-background: $primary;
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
-$colors: (
-    "white": ($white, $black),
+$colors: ("white": ($white, $black),
     "black": ($black, $white),
     "light": ($light, $light-invert),
     "dark": ($dark, $dark-invert),
@@ -38,6 +44,3 @@ $colors: (
     "twitter": ($twitter, $twitter-invert),
     "transparent": ($transparent, $secondary),
 );
-
-
-
