@@ -125,7 +125,17 @@
           </div>
 
           <div v-else>
-            <form class="form-login">conta criada</form>
+            <div class="form-login">
+              <figure class="image">
+                <img src="https://img.icons8.com/officel/512/000000/inspection.png">
+              </figure>
+              <b-field>
+                Conta criada com sucesso!
+              </b-field>
+              <b-field>
+                <router-link class="has-text-info" to="/login">Fazer o Login agora!</router-link>
+              </b-field>
+            </div>
           </div>
         </div>
       </div>
