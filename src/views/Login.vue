@@ -79,7 +79,6 @@ export default {
 
 <style scoped>
 .login {
-  overflow: hidden;
   height: 100vh;
   background-image: url('../assets/img/bg-login.png') !important;
   background-size: 100%;
