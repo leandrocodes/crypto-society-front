@@ -1,7 +1,6 @@
 .menu {
   padding: 1em;
   background-color: $primary;
-  color: $secondary !important;
   height: 100vh;
 
   .top-menu {
@@ -14,8 +13,17 @@
       color: $secondary;
       border: none;
       p{
-        margin: 0 1em;
+        margin: 0 .5em;
       }
+    }
+  }
+
+  .menu-label{
+    color: $light;
+  }
+  .menu-list{
+    a{
+      color: $light;
     }
   }
 

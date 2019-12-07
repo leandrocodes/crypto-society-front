@@ -1,22 +1,49 @@
 <template>
-  <div class="menu">
+  <b-menu>
     <div class="top-menu">
       <b-dropdown aria-role="list">
         <button class="button" slot="trigger">
           <span>
-            <p class="is-size-6 has-text-centered">
-              <i class="fas fa-user" style="margin-right: 1em;"></i>
-              Nome Sobrenome
-            </p>
+            <i class="fas fa-user" style="margin-right: .5em;"></i>
+            Nome Sobrenome
           </span>
           <b-icon icon="menu-down"></b-icon>
         </button>
 
-        <b-dropdown-item aria-role="listitem">Editar perfil</b-dropdown-item>
-        <b-dropdown-item aria-role="listitem">Sair</b-dropdown-item>
+        <b-dropdown-item aria-role="listitem">
+          <i class="fas fa-user-edit" style="margin-right: .5em;"></i> Editar perfil
+        </b-dropdown-item>
+        <b-dropdown-item aria-role="listitem" class="has-text-warning">
+          <i class="fas fa-sign-out-alt" style="margin-right: .5em;"></i> Sair
+        </b-dropdown-item>
       </b-dropdown>
     </div>
-  </div>
+    <br />
+
+    <b-menu-list label="Visualizações">
+      <router-link to="/dashboard">
+        <i class="fas fa-chart-pie" style="margin-right: .5em;"></i> Painel
+      </router-link>
+      <router-link to="/dashboard">
+        <i class="fab fa-bitcoin" style="margin-right: .5em;"></i> Fundos
+      </router-link>
+      <router-link to="/dashboard">
+        <i class="fas fa-file-alt" style="margin-right: .5em;"></i> Planos
+      </router-link>
+      <router-link to="/dashboard">
+        <i class="fas fa-wallet" style="margin-right: .5em;"></i> Saques
+      </router-link>
+    </b-menu-list>
+
+    <b-menu-list label="Solicitações">
+      <router-link to="/dashboard">
+        <i class="fab fa-bitcoin" style="margin-right: .5em;"></i> Novo Fundo
+      </router-link>
+      <router-link to="/dashboard">
+        <i class="fas fa-wallet" style="margin-right: .5em;"></i> Efetuar Saque
+      </router-link>
+    </b-menu-list>
+  </b-menu>
 </template>
 
 <script>
