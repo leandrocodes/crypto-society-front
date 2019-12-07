@@ -51,14 +51,16 @@
 
     <br />
 
-    <b-menu-list label="Ações">
-      <router-link to="/dashboard">
-        <i class="fas fa-user-edit" style="margin-right: .5em;"></i> Editar Perfil
-      </router-link>
-      <router-link to="/dashboard">
-        <i class="fas fa-sign-out-alt" style="margin-right: .5em;"></i> Sair
-      </router-link>
-    </b-menu-list>
+    <div class="actions" style="position: absolute; bottom: 1em;">
+      <b-menu-list label="Ações">
+        <router-link to="/dashboard">
+          <i class="fas fa-user-edit" style="margin-right: .5em;"></i> Editar Perfil
+        </router-link>
+        <router-link to="/dashboard" class="has-text-warning">
+          <i class="fas fa-sign-out-alt" style="margin-right: .5em;"></i> Sair
+        </router-link>
+      </b-menu-list>
+    </div>
   </b-menu>
 </template>
 
