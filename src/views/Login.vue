@@ -11,45 +11,39 @@
             <h6 class="has-text-centered has-text-light">Bem-vindo de volta! Faça o login para acessar a plataforma.</h6>
           </div>
           <form class="form-login">
-            <div class="field has-text-centered">
-              Não tem uma conta ainda?
-              <router-link class="has-text-info" to="/register">Criar uma agora</router-link>
-            </div>
             <figure class="image">
               <img src="../assets/img/login-illustration.png" alt srcset />
             </figure>
-            <div class="field">
-              <label class="label has-text-dark has-text-weight-semibold is-size-6">Email</label>
-              <div class="control has-icons-left has-icons-right">
-                <input class="has-text-dark input" type="email" placeholder="nome@mail.com" v-model="email" />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
-              </div>
-            </div>
-            <div class="field">
-              <label class="label has-text-dark has-text-weight-semibold is-size-6">Senha</label>
-              <div class="control has-icons-left has-icons-right">
-                <input class="has-text-dark input" type="password" placeholder="***" v-model="password" />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-lock"></i>
-                </span>
-              </div>
-            </div>
-            <div class="field is-grouped">
+
+            <b-field label="Email" style="width: 100%">
+              <b-input placeholder="nome@email.com" expanded type="email" icon-pack="fas" icon="envelope" v-model="email"></b-input>
+            </b-field>
+
+            <b-field label="Senha" style="width: 100%">
+              <b-input placeholder="***" expanded type="password" icon-pack="fas" icon="lock" v-model="password"></b-input>
+            </b-field>
+
+            <b-field>
               <div class="control">
-                <button @click.prevent="login" class="button is-link">Login</button>
+                <button @click.prevent="login" class="button is-link">
+                  Login
+                  <span style="margin-left: 10px">
+                    <i class="far fa-hand-point-right"></i>
+                  </span>
+                </button>
               </div>
-            </div>
-            <div class="field has-text-left">
-              <a class="has-text-info">Esqueci minha senha</a>
-            </div>
+            </b-field>
+
+            <b-field>
+              Não tem uma conta?
+              <router-link class="has-text-info" to="/register">Faça o cadastro</router-link>
+            </b-field>
           </form>
         </div>
       </div>
     </div>
     <b-loading is-full-page :active.sync="isLoading" :can-cancel="false">
-      <b-icon class="has-text-light" pack="fas" icon="sync-alt" size="is-large" custom-class="fa-spin"></b-icon>
+      <b-icon class="has-text-dark" pack="fas" icon="sync-alt" size="is-large" custom-class="fa-spin"></b-icon>
     </b-loading>
   </div>
 </template>

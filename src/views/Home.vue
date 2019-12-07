@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import navBar from '../components/ui-elem/nav-bar'
+import navBar from '../components/home/nav-bar'
 export default {
   components: {
     navBar

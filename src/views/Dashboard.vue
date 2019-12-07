@@ -1,17 +1,25 @@
 <template>
-  <h1 class="has-text-grey-lighter is-size-1 has-text-centered">Dashboard</h1>
+  <div class="dashboard">
+    <div class="columns">
+      <div class="column is-2">
+        <dashMenu></dashMenu>
+      </div>
+      <div class="column is-10 has-text-left">
+        <h1 class="has-text-dark is-size-1">Dashboard</h1>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import dashMenu from '../components/dashboard/menu'
 export default {
+  components: {
+    dashMenu
+  }
 
 }
 </script>
 
 <style scoped>
-
-body{
-  background-color: white!important;
-}
-
 </style>

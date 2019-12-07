@@ -1,0 +1,23 @@
+.menu {
+  padding: 1em;
+  background-color: $primary;
+  color: $secondary !important;
+  height: 100vh;
+
+  .top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .button {
+      background-color: transparent;
+      color: $secondary;
+      border: none;
+      p{
+        margin: 0 1em;
+      }
+    }
+  }
+
+
+}
