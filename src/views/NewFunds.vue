@@ -1,7 +1,7 @@
 <template>
   <div class="new-funds">
     <div class="columns">
-      <div class="column is-2">
+      <div class="column is-3-desktop is-2-fullhd">
         <dashMenu></dashMenu>
       </div>
       <div class="column is-10 has-text-left">

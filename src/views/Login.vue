@@ -2,7 +2,7 @@
   <div class="login">
     <div class="container">
       <div class="columns is-centered is-mobile">
-        <div class="column is-4-fullhd is-4-desktop is-6-widescreen is-6-tablet is-11-mobile">
+        <div class="column is-4-fullhd is-6-desktop is-4-widescreen is-8-tablet is-11-mobile">
           <h1 class="has-text-centered has-text-light title has-text-weight-medium">
             Login
             <div class="title-dash"></div>
@@ -25,11 +25,9 @@
 
             <b-field>
               <div class="control">
-                <button @click.prevent="login" class="button is-link">
+                <button @click.prevent="login" class="button is-link has-text-weight-light">
                   Login
-                  <span style="margin-left: 10px">
-                    <i class="far fa-hand-point-right"></i>
-                  </span>
+                    <i style="margin-left: 10px" class="fa fa-angle-right"></i>
                 </button>
               </div>
             </b-field>
