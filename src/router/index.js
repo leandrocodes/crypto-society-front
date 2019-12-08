@@ -5,6 +5,7 @@ import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import Dashboard from '../views/Dashboard.vue'
 import NewFunds from '../views/NewFunds.vue'
+import Funds from '../views/Funds.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/newfund',
     name: 'newfund',
     component: NewFunds
+  },
+  {
+    path: '/funds',
+    name: 'funds',
+    component: Funds
   }
 ]
 

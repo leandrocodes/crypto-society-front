@@ -8,7 +8,7 @@
       <router-link to="/dashboard">
         <i class="fas fa-chart-pie" style="margin-right: .5em;"></i> Painel
       </router-link>
-      <router-link to="/dashboard">
+      <router-link to="/funds">
         <i class="fab fa-bitcoin" style="margin-right: .5em;"></i> Fundos
       </router-link>
       <router-link to="/dashboard">
