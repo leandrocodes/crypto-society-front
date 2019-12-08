@@ -1,25 +1,6 @@
 <template>
   <b-menu>
-    <!--     <div class="top-menu">
-      <b-dropdown aria-role="list">
-        <button class="button" slot="trigger">
-          <span class="is-size-7">
-            <i class="fas fa-user" style="margin-right: .5em;"></i>
-            leandrovianacodes@gmail.com
-          </span>
-          <b-icon icon="menu-down"></b-icon>
-        </button>
-
-        <b-dropdown-item aria-role="listitem">
-          <i class="fas fa-user-edit" style="margin-right: .5em;"></i> Editar perfil
-        </b-dropdown-item>
-        <b-dropdown-item aria-role="listitem" class="has-text-warning">
-          <i class="fas fa-sign-out-alt" style="margin-right: .5em;"></i> Sair
-        </b-dropdown-item>
-      </b-dropdown>
-    </div>-->
-
-    <img src="../../assets/img/logo.png" alt="Lightweight UI components for Vue.js based on Bulma" />
+    <img src="../../assets/img/house.png" alt="House Logo" />
 
     <br />
 
