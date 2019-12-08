@@ -6,7 +6,6 @@
       </div>
       <div class="column is-10 has-text-left">
         <h1 class="has-text-dark is-size-2">Novo Fundo</h1>
-        {{localId}}
         <div class="container" style="margin-top: 3em;">
           <div class="columns is-centered">
             <div class="column is-4">
@@ -35,17 +34,19 @@
                 <b-field label="Valor solicitado">
                   <b-input v-model="value" placeholder="30" width="50"></b-input>
                 </b-field>
-                <button class="button is-primary" @click.prevent="newFund">Novo Fundo  <i style="margin-left: 10px;" class="fas fa-check"> </i> </button>
-                {{value}}
-                {{currency_fund}}
-                {{currency_type}}
-                {{time}}
+                <button class="button is-primary" @click.prevent="newFund">
+                  Novo Fundo
+                  <i style="margin-left: 10px;" class="fas fa-check"></i>
+                </button>
               </form>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <b-loading is-full-page :active.sync="isLoading" :can-cancel="false">
+      <b-icon class="has-text-light" pack="fas" icon="spinner" size="is-large" custom-class="fa-spin"></b-icon>
+    </b-loading>
   </div>
 </template>
 
@@ -56,7 +57,8 @@ export default {
     value: null,
     currency_fund: null,
     currency_type: null,
-    time: null
+    time: null,
+    isLoading: false
   }),
   components: {
     dashMenu
@@ -68,9 +70,7 @@ export default {
   },
   methods: {
     newFund() {
-
-      // eslint-disable-next-line no-console
-      // console.log(data)
+      this.isLoading = true
       this.axios.post('/investor/funds/', {
         localId: this.localId,
         time: this.time,
@@ -79,15 +79,23 @@ export default {
         value: this.value
       })
         .then(() => {
-          // eslint-disable-next-line no-console
-          //console.log('inserido com sucesso')
+          this.$buefy.toast.open({
+            message: 'Fundo enviado para avaliação com sucesso!',
+            type: 'is-success'
+          })
         })
-        .catch(() => {
-          // eslint-disable-next-line no-console
-          //console.log(err)
+        .catch((err) => {
+          this.$buefy.toast.open({
+            message: err,
+            type: 'is-warning'
+          })
         })
         .finally(() => {
-
+          this.isLoading = false
+          this.value = null
+          this.currency_fund = null
+          this.currency_type = null
+          this.time = null
         })
     },
   }

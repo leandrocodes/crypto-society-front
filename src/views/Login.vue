@@ -67,7 +67,6 @@ export default {
           this.$store.state.user.email = response.data.email
           this.$store.state.user.localId = response.data.localId
           this.$store.state.user.logado = true
-
         })
         .catch(() => {
 
