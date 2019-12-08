@@ -1,4 +1,5 @@
 <template>
+<!-- TODO: FIX FOR LAPTOPS-->
   <div class="login">
     <div class="container">
       <div class="columns is-centered is-mobile">
