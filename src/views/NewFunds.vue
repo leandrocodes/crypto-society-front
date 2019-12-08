@@ -1,4 +1,5 @@
 <template>
+<!-- TODO: GET USER FUNDS -->
   <div class="new-funds">
     <div class="columns">
       <div class="column is-3-desktop is-2-fullhd">
