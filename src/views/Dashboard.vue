@@ -5,7 +5,8 @@
         <dashMenu></dashMenu>
       </div>
       <div class="column is-10 has-text-left">
-        <h1 class="has-text-dark is-size-1">Dashboard</h1>
+        <h1 class="has-text-dark is-size-2">Dashboard</h1>
+        {{loggedIn}}
       </div>
     </div>
   </div>
@@ -16,6 +17,11 @@ import dashMenu from '../components/dashboard/menu'
 export default {
   components: {
     dashMenu
+  },
+  computed: {
+    loggedIn() {
+      return this.$store.state.user
+    }
   }
 
 }

@@ -38,6 +38,7 @@
               Não tem uma conta?
               <router-link class="has-text-info" to="/register">Faça o cadastro</router-link>
             </b-field>
+            {{loggedIn}}
           </form>
         </div>
       </div>
@@ -66,6 +67,10 @@ export default {
           this.$router.push('/dashboard')
           /*eslint-disable no-console*/
           console.log(response.data)
+          this.$store.state.user.email = response.data.email
+          this.$store.state.user.localId = response.data.localId
+          this.$store.state.user.logado = true
+
         })
         .catch(() => {
 
@@ -73,6 +78,11 @@ export default {
         .finally(() => {
           this.isLoading = false
         })
+    }
+  },
+  computed: {
+    loggedIn() {
+      return this.$store.state.user
     }
   }
 }

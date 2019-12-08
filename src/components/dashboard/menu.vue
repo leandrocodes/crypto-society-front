@@ -22,7 +22,7 @@
     <br />
 
     <b-menu-list label="Solicitações">
-      <router-link to="/dashboard">
+      <router-link to="/newfund">
         <i class="fab fa-bitcoin" style="margin-right: .5em;"></i> Novo Fundo
       </router-link>
       <router-link to="/dashboard">
