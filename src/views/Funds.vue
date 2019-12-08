@@ -19,9 +19,9 @@
         </div>
       </div>
     </div>
-    <!--     <b-loading is-full-page :active.sync="isLoading" :can-cancel="false">
+    <b-loading is-full-page :active.sync="isLoading" :can-cancel="false">
       <b-icon class="has-text-light" pack="fas" icon="spinner" size="is-large" custom-class="fa-spin"></b-icon>
-    </b-loading>-->
+    </b-loading>
   </div>
 </template>
 
@@ -30,7 +30,8 @@ import dashMenu from '../components/dashboard/menu'
 export default {
   data: () => ({
     funds: [],
-    id: null
+    id: null,
+    isLoading: false
   }),
   components: {
     dashMenu
@@ -42,6 +43,7 @@ export default {
   },
   created() {
     /* eslint-disable no-console */
+    this.isLoading = true
     this.axios.get(`/investor/funds?user=${this.localId}`)
       .then((res) => {
         console.log(res.data)
@@ -49,6 +51,9 @@ export default {
       })
       .catch((err) => {
         console.log(err)
+      })
+      .finally(() => {
+        this.isLoading = false
       })
   }
 
