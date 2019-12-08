@@ -139,7 +139,7 @@
       </div>
     </div>
     <b-loading is-full-page :active.sync="isLoading" :can-cancel="false">
-      <b-icon class="has-text-light" pack="fas" icon="sync-alt" size="is-large" custom-class="fa-spin"></b-icon>
+      <b-icon class="has-text-light" pack="fas" icon="spinner" size="is-large" custom-class="fa-spin"></b-icon>
     </b-loading>
   </div>
 </template>
