@@ -33,7 +33,7 @@
     <br />
 
     <div class="actions" style="position: absolute; bottom: 1em;">
-      <b-menu-list label="Ações">
+      <b-menu-list :label="user">
         <router-link to="/dashboard">
           <i class="fas fa-user-edit" style="margin-right: .5em;"></i> Editar Perfil
         </router-link>
@@ -50,6 +50,11 @@ export default {
   data() {
     return {
       isActive: true
+    }
+  },
+  computed:{
+    user(){
+      return this.$store.state.user.email
     }
   }
 }

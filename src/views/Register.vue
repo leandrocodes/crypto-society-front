@@ -22,11 +22,11 @@
                 </figure>
 
                 <b-field label="Email" style="width: 100%">
-                  <b-input placeholder="nome@email.com" expanded type="email" icon-pack="fas" icon="envelope" v-model="email"></b-input>
+                  <b-input placeholder="nome@email.com" expanded type="email" icon="email" v-model="email"></b-input>
                 </b-field>
 
                 <b-field label="Senha" style="width: 100%">
-                  <b-input placeholder="***" expanded type="password" icon-pack="fas" icon="lock" v-model="password"></b-input>
+                  <b-input placeholder="***" expanded type="password" icon="lock" v-model="password"></b-input>
                 </b-field>
 
                 <b-field>
@@ -54,11 +54,11 @@
                 </figure>
 
                 <b-field label="Nome Completo" style="width: 100%">
-                  <b-input placeholder="João Ninguém" expanded type="text" icon-pack="fas" icon="user" v-model="full_name"></b-input>
+                  <b-input placeholder="João Ninguém" expanded type="text" icon="account" v-model="full_name"></b-input>
                 </b-field>
 
                 <b-field label="Telefone" style="width: 100%">
-                  <b-input placeholder="67 12345 6789" expanded type="text" icon-pack="fas" icon="phone" v-model="telephone"></b-input>
+                  <b-input placeholder="67 12345 6789" expanded type="text" icon="phone" v-model="telephone"></b-input>
                 </b-field>
 
                 <b-field label="CPF" style="width: 100%">
@@ -95,14 +95,14 @@
                 </figure>
 
                 <b-field label="Bairro" style="width: 100%">
-                  <b-input placeholder="Jardim das Rosas" expanded type="text" icon-pack="fas" icon="map" v-model="bairro"></b-input>
+                  <b-input placeholder="Jardim das Rosas" expanded type="text" icon="map" v-model="bairro"></b-input>
                 </b-field>
 
                 <b-field label="Rua" style="width: 100%">
-                  <b-input placeholder="Rua Quinze de Maio" expanded type="text" icon-pack="fas" icon="map-signs" v-model="rua"></b-input>
+                  <b-input placeholder="Rua Quinze de Maio" expanded type="text" icon="routes" v-model="rua"></b-input>
                 </b-field>
                 <b-field label="Número" style="width: 100%">
-                  <b-input placeholder="123" expanded type="text" icon-pack="fas" icon="map-marker-alt" v-model="numero"></b-input>
+                  <b-input placeholder="123" expanded type="text" icon="map-marker" v-model="numero"></b-input>
                 </b-field>
 
                 <b-field>
@@ -139,7 +139,7 @@
       </div>
     </div>
     <b-loading is-full-page :active.sync="isLoading" :can-cancel="false">
-      <b-icon class="has-text-dark" pack="fas" icon="sync-alt" size="is-large" custom-class="fa-spin"></b-icon>
+      <b-icon class="has-text-light" pack="fas" icon="sync-alt" size="is-large" custom-class="fa-spin"></b-icon>
     </b-loading>
   </div>
 </template>

@@ -16,11 +16,11 @@
             </figure>
 
             <b-field label="Email" style="width: 100%">
-              <b-input placeholder="nome@email.com" expanded type="email" icon-pack="fas" icon="envelope" v-model="email"></b-input>
+              <b-input placeholder="nome@email.com" expanded type="email" icon="email" v-model="email"></b-input>
             </b-field>
 
             <b-field label="Senha" style="width: 100%">
-              <b-input placeholder="***" expanded type="password" icon-pack="fas" icon="lock" v-model="password"></b-input>
+              <b-input placeholder="***" expanded type="password" icon="lock" v-model="password" password-reveal></b-input>
             </b-field>
 
             <b-field>
@@ -38,13 +38,12 @@
               Não tem uma conta?
               <router-link class="has-text-info" to="/register">Faça o cadastro</router-link>
             </b-field>
-            {{loggedIn}}
           </form>
         </div>
       </div>
     </div>
     <b-loading is-full-page :active.sync="isLoading" :can-cancel="false">
-      <b-icon class="has-text-dark" pack="fas" icon="sync-alt" size="is-large" custom-class="fa-spin"></b-icon>
+      <b-icon class="has-text-light" pack="fas" icon="sync-alt" size="is-large" custom-class="fa-spin"></b-icon>
     </b-loading>
   </div>
 </template>
@@ -65,8 +64,6 @@ export default {
       })
         .then((response) => {
           this.$router.push('/dashboard')
-          /*eslint-disable no-console*/
-          console.log(response.data)
           this.$store.state.user.email = response.data.email
           this.$store.state.user.localId = response.data.localId
           this.$store.state.user.logado = true
@@ -78,11 +75,6 @@ export default {
         .finally(() => {
           this.isLoading = false
         })
-    }
-  },
-  computed: {
-    loggedIn() {
-      return this.$store.state.user
     }
   }
 }
